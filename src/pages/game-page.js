@@ -36,6 +36,9 @@ export default class GamePage {
         mesh.position.z = 1
         scene.add(mesh)
 
+        var axesHelper = new THREE.AxesHelper( 100 )
+        scene.add(axesHelper)
+
         camera.position.x = 0
         camera.position.y = 0
         camera.position.z = 0
