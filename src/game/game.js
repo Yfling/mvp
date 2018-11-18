@@ -1,14 +1,9 @@
-import gameController from './controller.js'
-
 class Game {
-  constructor () {
-    this.gameController = gameController
-  }
+    constructor () {
 
-  init () {
-    this.gameController.initPages();
-  }
+    }
+    init() {
+
+    }
 }
-
 export default new Game();
-
