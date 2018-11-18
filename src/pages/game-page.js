@@ -5,13 +5,14 @@ export default class GamePage {
 
     init () {
         console.log('game over page init');
-        var width = 375
-        var height = 667
+        var width = window.innerWidth;
+        var height = window.innerHeight;
 
         var renderer = new THREE.WebGLRenderer({
           canvas: canvas
         })
         var scene = new THREE.Scene()
+        this.scene = scene;
         var camera = new THREE.OrthographicCamera(-width / 2, width / 2,
         height / 2, -height / 2, -1000, 1000)
 
@@ -58,7 +59,6 @@ export default class GamePage {
         }
 
         render()
-
     }
 
     restart () {
