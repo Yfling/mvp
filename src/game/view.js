@@ -2,7 +2,7 @@ import GamePage from '../pages/game-page.js'
 import GameOverPage from '../pages/game-over-page.js'
 
 class GameView {
-    constructor () {
+    constructor (callbacks) {
     }
 
     showGameOverPage () {
@@ -13,7 +13,7 @@ class GameView {
         this.gamePage.restart();
     }
 
-    initGameOverPage (calllbacks) {
+    initGameOverPage (callbacks) {
         this.gameOverPage = new GameOverPage(callbacks);
         this.gameOverPage.init();
     }

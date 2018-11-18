@@ -5,11 +5,9 @@ export default class GamePage {
 
     init () {
         console.log('game over page init');
-
         var width = 375
         var height = 667
 
-        var canvas = document.getElementById('demo-canvas')
         var renderer = new THREE.WebGLRenderer({
           canvas: canvas
         })
@@ -17,7 +15,7 @@ export default class GamePage {
         var camera = new THREE.OrthographicCamera(-width / 2, width / 2,
         height / 2, -height / 2, -1000, 1000)
 
-        renderer.setClearColor(new THREE.Color(0x000000, 1.0))
+        renderer.setClearColor(new THREE.Color(0x000000))
         renderer.setSize(375, 667)
 
         var triangleShape = new THREE.Shape()
@@ -54,7 +52,7 @@ export default class GamePage {
 
         var render = function () {
           animate()
-          mesh.rotation.set(0, 0, currentAngle)
+          mesh.rotation.set(0, currentAngle, 0)
           renderer.render(scene, camera)
           requestAnimationFrame(render)
         }

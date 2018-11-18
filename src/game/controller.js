@@ -20,11 +20,11 @@ class GameController {
             showGameOverPage: this.showGameOverPage
         }
 
-        const gameOverPaageCallbacks = {
+        const gameOverPageCallbacks = {
             gameRestart: this.restartGame
         }
 
-        this.gameView.initGameOverPage(gameOverPaageCallbacks);
+        this.gameView.initGameOverPage(gameOverPageCallbacks);
         this.gameView.initGamePage(gamePageCallbacks);
     }
 }
